@@ -1,0 +1,276 @@
+/* 
+   Global Reset & Theme Variables (Quezon Nature Palette)
+    */
+:root {
+    --bg-sage: #2c423f;
+    --text-light: #f4f7f6;
+    --text-subtle: #d0deda;
+    --accent-gold: #e2c17c;
+    --card-bg: rgba(22, 36, 34, 0.75);
+    --overlay-dark: rgba(18, 30, 28, 0.65);
+    --font-heading: 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Segoe UI', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-sage);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 
+   Header & Navigation
+    */
+header {
+    background-color: rgba(18, 30, 28, 0.9);
+    border-bottom: 1px solid rgba(226, 193, 124, 0.3);
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+    letter-spacing: 4px;
+    font-family: var(--font-body);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: var(--text-subtle);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+/* 
+   Main Content Layout
+ */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.hero {
+    background: linear-gradient(var(--overlay-dark), var(--overlay-dark)), 
+                url('view.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 6rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2.5rem;
+}
+
+.hero h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+    font-style: italic;
+    font-family: var(--font-heading);
+}
+
+/* 
+   Grid & Card Layouts
+*/
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.section-subtext {
+    color: var(--text-subtle);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.card-body p {
+    color: var(--text-subtle);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.price-tag {
+    margin-top: auto;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(18, 30, 28, 0.85);
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 
+   Form Styles
+    */
+.form-container {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 2.5rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--text-subtle);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+button[type="submit"] {
+    background-color: transparent;
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-sage);
+}
+
+/* 
+   Footer
+    */
+footer {
+    background-color: rgba(18, 30, 28, 0.95);
+    border-top: 1px solid rgba(226, 193, 124, 0.2);
+    color: var(--text-subtle);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
