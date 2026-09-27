@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code By Dev404 | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="fade-in">
+            <a href="#home" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4L4 20M20 20L4 4"></path></svg>
+                ALBERT.DEV
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item active-link">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#services" class="nav-item">Services</a></li>
+                <li><a href="#skills" class="nav-item">Skills</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero scroll-section">
+            <div class="hero-text fade-in">
+                <p class="section-header">Hi, I'm</p>
+                <h1>CODE BY <br><span class="outline-text">DEV 404</span></h1>
+                <h2>Fullstack Developer <br>& UI/UX Designer</h2>
+                <p>I build exceptional, high-performing digital experiences, clean web interfaces, and robust backend systems with modern technologies.</p>
+                
+                <div class="btn-group">
+                    <a href="#projects" class="btn btn-primary">View Projects →</a>
+                    <a href="#" class="btn btn-outline">Download CV ↓</a>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <span>Satisfied Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <span>Completed Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <span>Technologies</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image fade-in">
+                <div class="hero-image-wrapper" id="hero3D">
+                    <div class="glitch-img"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="scroll-section">
+            <p class="section-header fade-in">About_Me.exe</p>
+            <div class="terminal-window fade-in">
+                <div class="terminal-top">
+                    <div class="dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="terminal-title">Path: C:\portfolio\about_me.md</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-sidebar">
+                        <div class="dir-title">Directories</div>
+                        <ul class="file-list" id="aboutTabs">
+                            <li class="active" data-target="bio">📄 bio.md</li>
+                            <li data-target="education">📁 education.md</li>
+                            <li data-target="location">📍 location.md</li>
+                        </ul>
+                    </div>
+                    <div class="terminal-content">
+                        <div id="bio" class="tab-pane active">
+                            <p style="font-family: monospace; color: var(--text-muted); margin-bottom: 10px;">// ACTIVE FILE: BIO.MD</p>
+                            <h2>Hello, World.</h2>
+                            <p>I'm a passionate developer who bridges the gap between creative visual design and robust software engineering. I like building things that live on the web, combining clean user interfaces with efficient logic.</p>
+                            <div class="code-block">
+                                const developer = {<br>
+                                &nbsp;&nbsp;name: "Dev 404",<br>
+                                &nbsp;&nbsp;role: "Full-Stack Developer",<br>
+                                &nbsp;&nbsp;status: "Available for hire"<br>
+                                };
+                            </div>
+                        </div>
+                        <div id="education" class="tab-pane">
+                            <p style="font-family: monospace; color: var(--text-muted); margin-bottom: 10px;">// ACTIVE FILE: EDUCATION.MD</p>
+                            <h2>Academic Background.</h2>
+                            <p>As an Information Technology graduate, I love building my technical skills through hands-on personal projects and continuous learning.</p>
+                            <p><strong>Degree:</strong> Bachelor of Science in Information Technology<br>
+                            <strong>Status:</strong> Graduate / Lifelong Learner</p>
+                        </div>
+                        <div id="location" class="tab-pane">
+                            <p style="font-family: monospace; color: var(--text-muted); margin-bottom: 10px;">// ACTIVE FILE: LOCATION.MD</p>
+                            <h2>Geographic Node.</h2>
+                            <p>Operating locally with full availability for remote collaboration globally.</p>
+                            <p><strong>Base:</strong> Cebu City, Philippines<br>
+                            <strong>Timezone:</strong> UTC+8 (Philippine Standard Time)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="scroll-section">
+            <p class="section-header fade-in">Sample Projects</p>
+            <div class="projects-grid">
+                <div class="project-card fade-in stagger-1">
+                    <div class="project-img-container">
+                        <div class="project-img">APP PREVIEW</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Motorcycle Parts E-commerce & Services Management System</p>
+                    </div>
+                </div>
+                <div class="project-card fade-in stagger-2">
+                    <div class="project-img-container">
+                        <div class="project-img">WEB PREVIEW</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Web App</h3>
+                        <p>Student Record Management System</p>
+                    </div>
+                </div>
+                <div class="project-card fade-in stagger-3">
+                    <div class="project-img-container">
+                        <div class="project-img">RENTAL PREVIEW</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Rental Platform</h3>
+                        <p>Property Rental Platform Management System</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="scroll-section">
+            <p class="section-header fade-in">Services Offer</p>
+            <div class="services-grid">
+                <div class="service-card fade-in stagger-1">
+                    <div class="service-number">01</div>
+                    <h4>Development & Delivery</h4>
+                    <h3>Static Website</h3>
+                    <p>Lightning-fast, ultra-secure landing pages and portfolios built with modern technologies tailored for optimal conversion.</p>
+                </div>
+                <div class="service-card fade-in stagger-2">
+                    <div class="service-number">02</div>
+                    <h4>Fullstack Architecture</h4>
+                    <h3>Dynamic Website</h3>
+                    <p>Interactive web applications featuring real-time database integration, secure user authentication, and API connections.</p>
+                </div>
+                <div class="service-card fade-in stagger-3">
+                    <div class="service-number">03</div>
+                    <h4>Infrastructure & Ops</h4>
+                    <h3>Deployment & Maintenance</h3>
+                    <p>Seamless Git-based deployment, cloud hosting setup, continuous security updates, and dependable monitoring.</p>
+                </div>
+                <div class="service-card fade-in stagger-4">
+                    <div class="service-number">04</div>
+                    <h4>Design & Refinement</h4>
+                    <h3>UI/UX & Optimization</h3>
+                    <p>Performance tuning, SEO enhancements, and bespoke responsive design to keep your digital products running at top speed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="scroll-section">
+            <p class="section-header fade-in">Tech Stack & Tools</p>
+            <div class="skills-container fade-in">
+                <div class="skills-sidebar" id="skillTabs">
+                    <div class="skill-tab active" data-target="frontend">
+                        Frontend <span>4</span>
+                    </div>
+                    <div class="skill-tab" data-target="backend">
+                        Backend <span>3</span>
+                    </div>
+                    <div class="skill-tab" data-target="tools">
+                        Design & Tools <span>3</span>
+                    </div>
+                </div>
+                
+                <div class="skills-content">
+                    <div id="frontend" class="skill-grid active">
+                        <div class="skill-item"><h2>⚛️</h2><span>React.js</span></div>
+                        <div class="skill-item"><h2>🟨</h2><span>JavaScript</span></div>
+                        <div class="skill-item"><h2>🌐</h2><span>HTML5</span></div>
+                        <div class="skill-item"><h2>🎨</h2><span>CSS3</span></div>
+                    </div>
+                    
+                    <div id="backend" class="skill-grid">
+                        <div class="skill-item"><h2>🐘</h2><span>PHP</span></div>
+                        <div class="skill-item"><h2>🔺</h2><span>Laravel</span></div>
+                        <div class="skill-item"><h2>🐬</h2><span>MySQL</span></div>
+                    </div>
+    
+                    <div id="tools" class="skill-grid">
+                        <div class="skill-item"><h2>🖌️</h2><span>Figma</span></div>
+                        <div class="skill-item"><h2>📸</h2><span>Canva</span></div>
+                        <div class="skill-item"><h2>✂️</h2><span>CapCut</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
