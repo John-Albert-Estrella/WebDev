@@ -210,15 +210,34 @@ nav {
 .skill-grid { display: none; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 20px; }
 .skill-grid.active { display: grid; animation: tabFadeIn 0.4s ease forwards; }
 @keyframes tabFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-.skill-item {
-    border: 1px solid var(--border-color); padding: 20px 10px; text-align: center;
-    background-color: var(--bg-color); cursor: default; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.skill-item { 
+    border: 1px solid var(--border-color); 
+    padding: 20px 10px; 
+    background-color: var(--bg-color); 
+    cursor: default; 
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .skill-item h2 { transition: transform 0.3s ease; }
 .skill-item:hover { transform: translateY(-8px); border-color: var(--accent-color); box-shadow: 0 10px 20px var(--shadow-color); }
 .skill-item:hover h2 { transform: scale(1.2); }
-.skill-item span { display: block; margin-top: 10px; font-weight: 600; font-size: 0.9rem; }
+.skill-item span { 
+    display: block; 
+    font-weight: 600; 
+    font-size: 0.9rem; 
+}
 
+.skill-icon { 
+    width: 50px; 
+    height: 50px; 
+    object-fit: contain; 
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; 
+    display: block; 
+}
 /* Responsive */
 @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; }
